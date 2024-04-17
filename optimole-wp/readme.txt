@@ -4,6 +4,7 @@ Tags: image optimization, convert webp, image optimizer, lazy load, image, optim
 Requires at least: 5.5
 Tested up to: 6.5
 Requires PHP: 5.4
+Stable tag: 3.12.8
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -34,7 +35,7 @@ Optimole [optimizes](https://www.codeinwp.com/blog/how-to-optimize-images/) your
 - Lazy load without jQuery (better)
 - Add a splash of color to your lazy-loading placeholder
 - Hero image optimization for speedier loads
-- Boost wooCommerce gallery performance with Optimole's lazy-loading
+- Boost WooCommerce gallery performance with Optimole's lazy-loading
 - More file types in the dashboard (video, audio, documents and more)
 - Fully functional free version (we have [paid plans](https://optimole.com/pricing/?utm_source=wpadmin&utm_medium=readme&utm_campaign=optimole) as well)
 
@@ -79,7 +80,7 @@ Optimole will use just one image and resize it delivering a responsive image to 
 
 #### Retina Support
 
-Optimole can detect Retina screens and deliver an image with the perfect Digital Pixel Ratio (DPR).
+Optimole can detect Retina screens and deliver an image with the perfect Device Pixel Ratio (DPR).
 
 #### Smart Cropping
 
@@ -137,7 +138,7 @@ We're here to help. Feel free to open a new thread on the [Support Forum](https:
 
 ### Documentation 📚
 
-Discover how to make the most of Otter Blocks with our detailed and user-friendly [documentation](https://docs.optimole.com/).
+Discover how to make the most of Optimole with our detailed and user-friendly [documentation](https://docs.optimole.com/).
 
 == Screenshots ==
 
@@ -148,6 +149,23 @@ Discover how to make the most of Otter Blocks with our detailed and user-friendl
 5. Cloud Storage
 
 == Changelog ==
+
+##### [Version 3.12.8](https://github.com/Codeinwp/optimole-wp/compare/v3.12.7...v3.12.8) (2024-04-16)
+
+- Hotfix for a compatibility issue with one of the dependencies affecting a small subset of users.
+
+
+
+
+##### [Version 3.12.7](https://github.com/Codeinwp/optimole-wp/compare/v3.12.6...v3.12.7) (2024-04-16)
+
+- Resolved an issue where the admin style was loaded prematurely.
+- Enhanced Largest Contentful Paint (LCP) by prioritizing the loading of initial images that are not affected by lazyload.
+- Improved support for multiple languages and enhanced plugin translations.
+- Remove WP_DISABLE_CRON false positive detection of a not working wp-cron.
+
+
+
 
 ##### [Version 3.12.6](https://github.com/Codeinwp/optimole-wp/compare/v3.12.5...v3.12.6) (2024-03-22)
 
@@ -754,7 +772,7 @@ Once you exceed these, we will contact you and kindly ask to upgrade to the plan
 
 = What Content Delivery Network (CDN) do you use? =
 
-For both FREE and Paid plans we use AWS CloudFront CDN with more than 200 locations around the globe.
+For both FREE and Paid plans we use AWS CloudFront CDN with more than 450 locations around the globe.
 
 = I'm already using a CDN, can I use that instead of yours ? =
 
@@ -764,7 +782,7 @@ Short answer, YES. You will only need to whitelist the domain of your existing C
 
 You don’t need to change your existing optimization plugin, image optimization is just a small part of what we do, if you are happy with ShortPixel for e.g, feel free to continue to use it, Optimole would then take care only of serving your image at the RIGHT size, advanced cropping and smart lazy-loading.
 
-= Does Optimole handle images from Ajax content  ? =
+= Does Optimole handle images from Ajax content ? =
 
 Yes, we do. By default, Optimole handle images delivered from your ajax content from admin-ajax.php ( not logged in users ) as well as WordPress REST API routes.
 
@@ -780,7 +798,7 @@ We use your original images as sources when deliver the optimized images. Unless
 
 A higher compression might result in a small loss of image quality. Selecting the auto level will let Optimole choose the minimum size with no loss in the quality of your picture.
 
-= I used Kraken, Shortpixel, Optimus, EWWW or WP Smush, Imagify  will Optimole further optimize my images? =
+= I used Kraken, Shortpixel, Optimus, EWWW or WP Smush, Imagify will Optimole further optimize my images? =
 
 Yes, Optimole will also take care of serving your image at the RIGHT size for your visitors and optimize them to the best possible format for their browser.
 
