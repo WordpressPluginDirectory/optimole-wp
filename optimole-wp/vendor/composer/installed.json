@@ -2,17 +2,17 @@
     "packages": [
         {
             "name": "codeinwp/optimole-sdk",
-            "version": "v1.2.2",
-            "version_normalized": "1.2.2.0",
+            "version": "v1.2.4",
+            "version_normalized": "1.2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeinwp/optimole-php-sdk.git",
-                "reference": "567557f1067c934a564154dd292a3f343749b538"
+                "reference": "2f7a48525014bd681f39ddc85c55521b719d5879"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeinwp/optimole-php-sdk/zipball/567557f1067c934a564154dd292a3f343749b538",
-                "reference": "567557f1067c934a564154dd292a3f343749b538",
+                "url": "https://api.github.com/repos/Codeinwp/optimole-php-sdk/zipball/2f7a48525014bd681f39ddc85c55521b719d5879",
+                "reference": "2f7a48525014bd681f39ddc85c55521b719d5879",
                 "shasum": ""
             },
             "require": {
@@ -32,7 +32,7 @@
             "suggest": {
                 "guzzlehttp/guzzle": "Use the Guzzle HTTP client to make requests to the API"
             },
-            "time": "2025-03-28T18:31:54+00:00",
+            "time": "2025-11-14T18:01:16+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
