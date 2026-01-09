@@ -115,14 +115,16 @@ final class Optml_Lazyload_Replacer extends Optml_App_Replacer {
 			return self::$background_lazyload_selectors;
 		}
 
+		if ( self::instance()->settings === null ) {
+			self::$background_lazyload_selectors = [];
+
+			return self::$background_lazyload_selectors;
+		}
 		if ( self::instance()->settings->get( 'bg_replacer' ) === 'disabled' ) {
 			self::$background_lazyload_selectors = [];
 			return self::$background_lazyload_selectors;
 		}
 		$default_watchers = [
-			'.elementor-section[data-settings*="background_background"]',
-			'.elementor-column[data-settings*="background_background"] > .elementor-widget-wrap',
-			'.elementor-section > .elementor-background-overlay',
 			'[class*="wp-block-cover"][style*="background-image"]',
 			'[style*="background-image:url("]', '[style*="background-image: url("]',
 			'[style*="background:url("]', '[style*="background: url("]',

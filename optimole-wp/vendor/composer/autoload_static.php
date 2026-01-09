@@ -12,15 +12,15 @@ class ComposerStaticInit6eb5b1cc07f2614058eaa1c6a8181fac
     );
 
     public static $prefixLengthsPsr4 = array (
-        'e' => 
+        'e' =>
         array (
             'enshrined\\svgSanitize\\' => 22,
         ),
-        'S' => 
+        'S' =>
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
         ),
-        'O' => 
+        'O' =>
         array (
             'Optimole\\Sdk\\' => 13,
             'OptimoleWP\\' => 11,
@@ -28,19 +28,19 @@ class ComposerStaticInit6eb5b1cc07f2614058eaa1c6a8181fac
     );
 
     public static $prefixDirsPsr4 = array (
-        'enshrined\\svgSanitize\\' => 
+        'enshrined\\svgSanitize\\' =>
         array (
             0 => __DIR__ . '/..' . '/enshrined/svg-sanitize/src',
         ),
-        'Symfony\\Polyfill\\Php80\\' => 
+        'Symfony\\Polyfill\\Php80\\' =>
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
         ),
-        'Optimole\\Sdk\\' => 
+        'Optimole\\Sdk\\' =>
         array (
             0 => __DIR__ . '/..' . '/codeinwp/optimole-sdk/src',
         ),
-        'OptimoleWP\\' => 
+        'OptimoleWP\\' =>
         array (
             0 => __DIR__ . '/../..' . '/inc/v2',
         ),
