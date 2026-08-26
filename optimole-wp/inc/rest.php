@@ -718,7 +718,7 @@ class Optml_Rest {
 		foreach ( $final_images as $index => $value ) {
 			$final_images[ $index ]['url'] = Optml_Media_Offload::instance()->get_media_optimized_url(
 				$value['url'],
-				$value['key'],
+				strtolower( $value['key'] ),
 				140,
 				140,
 				[
@@ -844,7 +844,13 @@ class Optml_Rest {
 	 * @return WP_REST_Response
 	 */
 	public function clear_offload_errors( WP_REST_Request $request ) {
-		$delete_count = Optml_Media_Offload::clear_offload_errors_meta();
+		$action = $request->get_param( 'action' );
+
+		if ( 'rollback_images' === $action ) {
+			$delete_count = Optml_Media_Offload::clear_rollback_errors_meta();
+		} else {
+			$delete_count = Optml_Media_Offload::clear_offload_errors_meta();
+		}
 
 		return $this->response( [ 'success' => $delete_count ] );
 	}
@@ -959,6 +965,7 @@ class Optml_Rest {
 		}
 		// save just the first 6 images, see https://github.com/Codeinwp/optimole-service/issues/1588#issuecomment-3357110865
 		$above_fold_images = array_slice( $above_fold_images, 0, 6 );
+		$above_fold_images = array_values( array_map( 'intval', array_filter( $above_fold_images, 'is_numeric' ) ) );
 		if ( count( $bg_selectors ) > 100 ) {
 			return $this->response( 'Background selectors limit exceeded', 'error' );
 		}
